@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: #111111;
+    color: var(--primary-font-color);
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -44,7 +44,7 @@
     font-weight: 700;
     line-height: 1.2857;
     letter-spacing: -0.03em;
-    color: #111111;
+    color: var(--primary-font-color);
   }
   .italic-logo {
     font-style: italic;
@@ -118,14 +118,14 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: #111111;
+    color: var(--primary-font-color);
   }
   .nav-link.logo {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.2857;
     letter-spacing: -0.03em;
-    color: #111111;
+    color: var(--primary-font-color);
   }
   .italic-logo {
     font-style: italic;
@@ -165,7 +165,7 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: #111111;
+    color: var(--primary-font-color);
   }
   .nav-link.logo {
     font-size: 14px;
@@ -173,7 +173,7 @@
     line-height: 1.2857;
     letter-spacing: -0.03em;
     align-items: center;
-    color: #111111;
+    color: var(--primary-font-color);
   }
   .italic-logo {
     font-style: italic;
@@ -225,7 +225,7 @@
     line-height: 1.11;
     letter-spacing: -0.03em;
     align-items: center;
-    color: #111111;
+    color: var(--primary-font-color);
   }
   .italic-logo {
     font-style: italic;
@@ -254,9 +254,10 @@
     margin-bottom: 0;
   }
   .icon-logo {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     margin-left: 4px;
+    margin-bottom: 5px;
   }
   .icon-social {
     width: 24px;
@@ -270,7 +271,7 @@
     display: flex;
     align-items: center;
     letter-spacing: -0.02em;
-    color: #111111;
+    color: var(--primary-font-color);
     transition: color 250ms var(--timing-function);
   }
 

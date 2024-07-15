@@ -5,7 +5,7 @@
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
-    url('/img/bg-image/bg-subcribe-mobile.jpg');
+    url('/img/bg-image/bg-subcribe-desktop.jpg');
 
   background-repeat: no-repeat;
   background-position: center;
@@ -29,7 +29,7 @@
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
       ),
-      url('/img/bg-image/bg-subcribe-mobile@2x.jpg');
+      url('/img/bg-image/bg-subcribe-desktop.jpg');
   }
 }
 
@@ -40,7 +40,7 @@
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
       ),
-      url('/img/bg-image/bg-subcribe-tablet.jpg');
+      url('/img/bg-image/bg-subcribe-desktop.jpg');
     padding-top: 72px;
     padding-bottom: 72px;
   }
@@ -203,7 +203,7 @@
 }
 
 .modal-top {
-  background-image: url('/img/chocolate-mob.jpg');
+  background-image: url('/img/baby-g97495d16e_1280.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -219,7 +219,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .modal-top {
-    background-image: url('/img/chocolate-mob@2x.jpg');
+    background-image: url('/img/baby-g97495d16e_1280.jpg');
   }
 }
 
@@ -389,7 +389,7 @@
   }
 
   .modal-top {
-    background-image: url('/img/chocolate-desk-tab.jpg');
+    background-image: url('/img/777.jpg');
     height: 196px;
     margin: 0px;
   }
@@ -550,7 +550,7 @@
           rgba(0, 0, 0, 0.2),
           rgba(0, 0, 0, 0.2)
         ),
-        url('/img/bg-image/bg-subcribe-desktop@2x.jpg');
+        url('/img/bg-image/bg-subcribe-desktop.jpg');
     }
   }
 }
