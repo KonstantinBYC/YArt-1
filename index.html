@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+  <link rel="icon" type="image/svg+xml" href="/team-project-g21/assets/favicon-c1d6ca9a.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yaroshenko Art</title>
+
+  
+  <!-- FAVIVCON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/team-project-g21/assets/apple-touch-icon-dc753229.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABTVJREFUWEfFV2lIVU0Yfk6ZqUW5gwYVIS0q9ktyIUrUCMlEbYEwMSxEDERFEv0hGEkqimCCpJFIJUlSbuWCobkjIqiQJpigIJiKuGRaeeJ5+Y5cr9flfiENXObeO+fMvPM+y7yjqKqqLiwsgO3AgQOYnZ2Vnm1xcRGWlpbS79a4Mj8/r5qYmMgCv379gqmpqfRs/H9lZUX63Rr/9wGsrq6qu5ni7SBUZmZmVGMwn5+fR2trK1ZXVwWupaUl6RVFgaurK1xcXIzijLK8vKzqYy6A/9d0OdHd3Y2goCBZgAuqqio9GwOysLBAVVUVzp07t2PObAggIiICb968kQmuX7+O58+fCynb29sRGhqKixcvyn/79u2TRffu3Sv9z58/wXc/ffqEiooKeHh47IjUAsHy8jLy8vLw+fNneZkTsu3ZswdXr14FZdrU1ISAgACUlZXJYoZkSQlHRUWhurpaAiX+DJ5Bsv3+/VsCP3HiBO7fv48jR45AMuDu7o7JyUl4e3vLQ9oLTDElyM+lS5cQFhaGubm5LX1iZmYGNTU1aGhowPfv39cyxLk4L2Xd2dkJOzs7NDY2QqmurlYDAwMxMDCAo0ePruFJbPfv37+lD/AZ7pC7MsYnhoaGcPbsWQlUefHihXrnzh1MT0/jwYMHKCoqksk4+fv374VQukY0MTGBJ0+eoL6+HqOjo0JEptTf3x93797FqVOntjWyHz9+wNbWFiUlJVDKysrUW7duYWpqSibQCMggiouLER4eviarp0+fIjk5GY6Ojrh27RqcnJxgbm6Ovr4+eY/BpaamIiEhQTaxmZUzY9bW1igsLIRSXFys3rt3D8Tu9evXqK2tXWN3eno6bGxsBPNHjx7J5+HDh4iOjpas6J4dhCIjI0OeSUxMREpKyqZnC3nEDLx69QpKaWmpyl0yA2ZmZgYxb25uxuXLl5Gfny9E1IWE3zXV8HtBQQHi4uLw4cMHeHl5GTxbCBs3RjnvKAA/Pz9JdWVlpUiQqSVf3r59K1y5cuWK7J7MJsvpF3yG2TR0uK0LQBcCTq7v3WSss7MzysvLRduHDx+Gj48PRkZGJAgSKjc3F8ePH5cAraysxEtCQkIwPj4ugetb/ToIdEl46NChDfVAV1eXGBAnc3BwwMePH8GMtLS0iO8z4La2Npw/f170ffLkSdDYSFQSMzg4eMPZsI6EujJkOvVTxp2TI5QpnZFpvXnzJr59+4aDBw9Kypk5jVRckAcUf798+VKC168n1slwuwDo7dQ4oeCuKLUzZ84gOztb1MAAnj17JtKjmdETvn79itOnT0u26LJbBrAdBMyIvb29kCwmJkYgysrKwuPHj8W6mRXCQdmlpaXJOA2GfjE8PCyw6dcbm/qAIRJywvj4eDmMWAcwC/T4uro6sVK+Q1OiTLkQd+vm5gZfX18xGkM1ptE+MDY2JpbMHdMdyWxD3s+D7Pbt20JK1g7kwbYy3IkR0eU4KfVNr8/JyRFsdYtYqiUpKQmDg4N49+4dPD09N60HjPIB3RT29vYK2RgMyUZ/YBBfvnwRX+CiTPuxY8cM1gva2WCUDxgqKvv7++W8J8mIOY9x1gsXLlzY0b2CJKRhUT1KR0eHysh50t24cWOtgNAqIuJKpmt1n1aC/c04q6rIyEj09PRA7gWUDEsy7kYrMrWiVLfw1P3+f8c18sbGxiIzMxOKdi+gidBuiRMrITZaKitdmg0bGU0J/s04XVIr3zmX0feC7S4axo4bvBfs5l1Q/6757wMw9mpmbIq3uu7zNP0DuqpWCJBtyicAAAAASUVORK5CYII=" />
+  <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAelJREFUOE+lU73LcXEYvo6kJCwYLKSUwcZmsBmM0klKkcXHYlAng3xMyCAGpcSglDJalFWUCX+AMrD5SseA8/S7ix7vW2/v03Pq9Ov+nftc93Vd931zoihKAPB8PtkBmUxG5//G3K8BrtcrMeA4jipLkoTz+YxcLofD4UCxRqNBqVSCWq3+ixl3Op2kyWSCRCJBACyx3++jWCzCbrfTD6vViuJAIAC5XE55SqUSHo8HnCAIksFggF6vJ/3sdblc0Ol0VJ3FjN1+v8dsNsPj8SAAFu92O3A8z0s+nw/BYBA8z6PT6WC73VLFy+VCAKxaoVCA0Wh8m3y/3xGJRMD5/X6pUqlgOp3CYrHAbDYjHA6jXq/DZDKRBAaYTCbR6/XIj9fzBmBVX9qq1SocDge0Wi2xYJSz2SxutxsWiwVSqdQnAJPAAF5PNBpFq9VCLBYDA2MS0uk0Go0G3XW7XUp9S/gTIJPJIB6PYzweY7PZkJFWqxVutxvNZpNAPwCYB98lLJdL1Go1tNttcp11wOl0UpsZfZvN9m8PmGnD4RCDwQBer5eSR6MRdYl16zXi7J5MDIVCEmsRm4Pvu3A8HjGfz0kCmwuVSvXxnc1APp8Ht16vpXK5DFEUf7RMCoUCgiCAe+3CT7fwlf9rgC/NwyY4uT3k9wAAAABJRU5ErkJggg==" />
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiIiwic2hvcnRfbmFtZSI6IiIsImljb25zIjpbeyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtMTkyeDE5Mi5wbmciLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn0seyJzcmMiOiIvYW5kcm9pZC1jaHJvbWUtNTEyeDUxMi5wbmciLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIn1dLCJ0aGVtZV9jb2xvciI6IiNmZmZmZmYiLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2ZmZmZmZiIsImRpc3BsYXkiOiJzdGFuZGFsb25lIn0=" />
+  <link rel="mask-icon" href="./public/safari-pinned-tab.svg" color="#271805" />
+  <meta name="msapplication-TileColor" content="#b91d47" />
+  <meta name="theme-color" content="#681111" />
+
+  <!-- NORMALIZE -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+
+  <!-- fonts! -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- css -->
+  
+  <script type="module" crossorigin src="/team-project-g21/assets/index-4cc1c822.js"></script>
+  <link rel="stylesheet" href="/team-project-g21/assets/index-94749906.css">
+</head>
+
+<body>
+
+  <header class="header">
+  <div class="container header-nav">
+    <nav class="nav">
+      <a href="./index.html" class="nav-link logo"><span class="italic-logo">YAROSHENKO</span>&#160;ART
+        <svg class="icon-logo">
+          <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-camera"></use>
+        </svg>
+      </a>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="./index.html" id="home" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#products" id="Our-products" class="nav-link">Our works</a>
+        </li>
+        <li class="nav-item">
+          <a href="#how-its-made" class="nav-link">How it’s made?</a>
+        </li>
+        <li class="nav-item">
+          <a href="#sellers" id="top-sellers" class="nav-link">Top sellers</a>
+        </li>
+        <li class="nav-item">
+          <a href="#chocolate-is-loved" id="Chocolate-is-loved" class="nav-link">Photoshoot is loved</a>
+        </li>
+      </ul>
+
+      <button type="button" class="mobile-menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="mobile-menu-open_icon">
+          <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
+    </nav>
+    <address class="address">
+
+
+      <ul class="nav-list-social">
+        <li>
+          <a href="https://www.instagram.com/yaroshenko.art/" class="nav-link" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="icon-social">
+              <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/" class="nav-link" target="_blank" rel="noopener noreferrer">
+            <svg class="icon-social">
+              <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-tiktok"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" class="nav-link" target="_blank" rel="noopener noreferrer">
+            <svg class="icon-social">
+              <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </address>
+  </div>
+</header>
+
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <div class="mobile-menu-container">
+    <button class="menu-toggle js-close-menu">
+      <svg class="icon-x-close">
+        <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu">
+      <li><a href="./index.html" class="link-mobile">Home</a></li>
+      <li><a href="#how-its-made" class="link-mobile">How it's made?</a></li>
+      <li><a href="#products" class="link-mobile">Our products</a></li>
+      <li><a href="#sellers" class="link-mobile">Top sellers</a></li>
+      <li>
+        <a href="#chocolate-is-loved" class="link-mobile">Chocolate is loved</a>
+      </li>
+    </ul>
+
+    <ul class="menu-list-social">
+      <li>
+        <a href="https://www.instagram.com/" class="nav-link-mobile-menu" target="_blank">
+          <svg class="icon-social white">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.tiktok.com" class="nav-link-mobile-menu" target="_blank">
+          <svg class="icon-social white">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-tiktok"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com" class="nav-link-mobile-menu" target="_blank">
+          <svg class="icon-social white">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+  <section id="hero" class="hero">
+  <div class="hero-container">
+    <h1 class="hero-title visually-hidden">Hero</h1>
+    <h2 class="hero-desc">
+      Treat yourself or a loved one with a beautiful aesthetic photoshoot, capture the best moments of life.
+    </h2>
+    <div class="button-hero-cont">
+      <div class="hero-buttons">
+        <a data-open-modal="1" class="hero-button-buynow">Order now</a>
+        <a class="hero-button-howitsmade" href="#how-its-made">
+          How it's made
+        </a>
+      </div>
+      <div class="scroll-down-cont">
+        <p class="scroll-down">scroll down</p>
+        <a class="scroll-down-button" href="#footer">
+          <svg class="icon-scroll-down" width="22" height="22">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-scroll-down"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="advantages-sec adv-wrap">
+  <div class="container advantages-container">
+    <h2 class="visually-hidden">Advantages</h2>
+    <ul class="list adv-list">
+      <li class="adv-list-item">
+        <div class="adv-icon-circle">
+          <svg width="32px" height="32px" class="adv-icon">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-camera"></use>
+          </svg>
+        </div>
+        <p class="adv-hdr">Skills and art</p>
+        <p class="advantages-text">
+              Each photoset prepared and executed by me is a process of the highest quality
+              with a desire for perfection. Discover the world of professional photography that will emphasize your beauty, status and aesthetic refinement of photos.
+        </p>
+      </li>
+      <li class="adv-list-item">
+        <div class="adv-icon-circle">
+          <svg width="32px" height="32px" class="adv-icon">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-affordable-price"></use>
+          </svg>
+        </div>
+        <p class="adv-hdr">Affordable price</p>
+        <p class="advantages-text">
+          Enjoy high-quality photo shoots without extra costs from Yaroshenko-art.
+          Try street, personal or studio shooting. With us, you will be able to realize
+          any of your wishes and get the photos of your dreams. Browse our selection and enjoy affordable prices today.
+        </p>
+      </li>
+      <li class="adv-list-item">
+        <div class="adv-icon-circle">
+          <svg width="32px" height="32px" class="adv-icon">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-flag"></use>
+          </svg>
+        </div>
+        <p class="adv-hdr">Own production</p>
+        <p class="advantages-text">
+          We take pride in our own production process, ensuring that every step
+          is carefully crafted to perfection. From selecting the finest
+          equipment and location to handcrafting each piece, our attention to detail is
+          evident in every bite.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+  <section class="unique-components" id="unique-components">
+    <div class="container unique-components-container">
+        <h2 class="unique-components-heading">
+            IT ALL ADDS UP TO ONE EXCEPTIONAL <span>VISUAL</span> SENSATION
+        </h2>
+
+        <p class="unique-components-desc">
+            At Yaroshenko.Art, we believe that the secret to exceptional photoshoot
+            is in the details. From the sourcing of the finest equipment to the
+            careful gathered of each individual piece, every step of our process adds
+            up to one exceptional visual sensation.
+        </p>
+
+        <ul class="components-list">
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/team-project-g21/assets/ingredients-tab-mob-ca700ecc.png 1x, /team-project-g21/assets/ingredients-tab-mob-ca700ecc.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/team-project-g21/assets/ingredients-tab-mob-ca700ecc.png 1x, /team-project-g21/assets/ingredients-tab-mob-ca700ecc.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/team-project-g21/assets/ingredients-tab-mob-ca700ecc.png" alt="top cameras"
+                                    loading="lazy" />
+                            </picture>
+                            <p>TOP CAMERAS</p>
+                        </div>
+
+
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">Top cameras</p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">
+                                    top cameras
+                                </button>
+                                <button class="component-flip-card-back-button">
+                                    benefits
+                                </button>
+                            </div>
+                            <p class="component-flip-card-back-description">
+                                Canon EF 24-70mm f/2.8L II USM lens delivers superb image quality across the entire focal length range with aspherical, ultra-low dispersion (UD) and super UD glass lenses. The new optical system design provides maximum sharpness across the entire field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/team-project-g21/assets/ingredients2-tab-mob-463ed466.png 1x, /team-project-g21/assets/ingredients2-tab-mob-463ed466.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/team-project-g21/assets/ingredients2-tab-mob-463ed466.png 1x, /team-project-g21/assets/ingredients2-tab-mob-463ed466.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/team-project-g21/assets/ingredients2-tab-mob-463ed466.png" alt="equipment" loading="lazy" />
+                            </picture>
+                            <p>BEST EQUIPMENT</p>
+                        </div>
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">BEST EQUIPMENT</p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">equipment</button>
+                                <button class="component-flip-card-back-button">
+                                    benefits
+                                </button>
+                            </div>
+                            <p class="component-flip-card-back-description">
+                                Photo processing is carried out on Apple technology: iPad and MacBook. Apple introduced a new product
+                                to its line of tablets in 2024 - the iPad Pro 11. This tablet includes advanced technologies in a more
+                                compact format, designed for those who want mobility without losing productivity. The Apple iPad Pro 11
+                                 2024 runs on the iPadOS 17 operating system for a smooth, intuitive experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/team-project-g21/assets/ingredients3-tab-mob-5e469477.png 1x, /team-project-g21/assets/ingredients3-tab-mob-5e469477.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/team-project-g21/assets/ingredients3-tab-mob-5e469477.png 1x, /team-project-g21/assets/ingredients3-tab-mob-5e469477.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/team-project-g21/assets/ingredients3-tab-mob-5e469477.png" alt="studio" loading="lazy" />
+                            </picture>
+                            <p>MODERN STUDIO</p>
+                        </div>
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">Modern studio</p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">modern studio</button>
+                                <button class="component-flip-card-back-button">
+                                    benefits
+                                </button>
+                            </div>
+                            <p class="component-flip-card-back-description">
+                                Yaroshenko Studio is a place where inspiration never leaves you.
+Here we have collected all the best that a photographer and model needs: incredibly creative and cozy atmosphere. Always friendly staff, thoughtful locations and equipment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="components-list-item">
+                <div class="component-flip-card">
+                    <div class="component-flip-card-inner">
+                        <div class="component-flip-card-front">
+                            <picture>
+                                <source srcset="/team-project-g21/assets/ingredients4-tab-mob-3befbf99.png 1x, /team-project-g21/assets/ingredients4-tab-mob-3befbf99.png 2x" media="(max-width: 1199px)" />
+
+                                <source srcset="/team-project-g21/assets/ingredients4-tab-mob-3befbf99.png 1x, /team-project-g21/assets/ingredients4-tab-mob-3befbf99.png 2x" media="(min-width: 1200px)" />
+
+                                <img src="/team-project-g21/assets/ingredients4-tab-mob-3befbf99.png" alt="software"
+                                    loading="lazy" />
+                            </picture>
+                            <p>SPECIAL SOFTWARE</p>
+                        </div>
+                        <div class="component-flip-card-back">
+                            <p class="component-flip-card-back-heading">
+                                Special software
+                            </p>
+                            <div class="component-flip-card-back-buttons">
+                                <button class="component-flip-card-back-button">
+                                    special software
+                                </button>
+                                <button class="component-flip-card-back-button">
+                                    benefits
+                                </button>
+                            </div>
+                            <p class="component-flip-card-back-description">
+                                With the help of specialized programs, including
+                                Photoshop with the function of generative AI, we create excellent photos,
+                                shading, color alignment and imperfections. Only licensed software is used in the work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+  <section id="how-its-made" class="how-made">
+  <div class="container">
+    <h2 class="how-made-header">
+      How it’s <span class="how-made-header-orange">made?</span>
+    </h2>
+    <div class="how-made-container-main">
+
+      <div class="how-made-container-first">
+        <iframe class="video-how" src="https://www.youtube.com/embed/QC0WSfYUGU4" title="YouTube video player"
+          loading="lazy"      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <!-- <picture>
+          <source srcset="./img/how-made-tab.jpg 1x, ./img/how-made-tab@2x.jpg 2x" media="(min-width: 768px)" />
+          <source srcset="./img/how-made-desk.jpg 1x, ./img/how-made-desk@2x.jpg 2x" media="(min-width: 1200px)" />
+          <img class="how-made-picture" srcset="./img/how-made-mob.jpg 1x, ./img/how-made-mob@2x.jpg 2x"
+            src="./img/how-made-mob.jpg" alt="Chocolate" loading="lazy" />
+        </picture> -->
+        <!-- <svg class="how-made-icon-play" width="35" height="35">
+          <use href="./img/sprite.svg#icon-how-made-play"></use>
+        </svg> -->
+      </div>
+
+      <div class="how-made-container-second">
+        <p class="how-made-list-header">
+          Try our photoshoot today and discover the perfect balance of emotions
+        </p>
+
+        <ul class="how-made-list">
+          <li class="how-made-item">
+            help with choosing your image, location, makeup;
+          </li>
+          <li class="how-made-item">
+            full support before, during and after shooting;
+          </li>
+          <li class="how-made-item">
+            one hour of high-quality light shooting in a pleasant atmosphere;
+          </li>
+          <li class="how-made-item">
+            professional and fast photo processing to the best quality;
+          </li>
+          <li class="how-made-item">
+            100-200 processed photos and videos + backstage material.
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="products" class="section__our-products">
+  <div class="our-products__container container">
+    <h2 class="our-products__title">
+      OUR <span class="second-part__title">TYPES OF PHOTOSHOOT</span>
+    </h2>
+
+    <div class="our-products__block">
+      <ul class="our-products__list swiper-wrapper list">
+        <li class="our-products__item swiper-slide">
+          <img srcset="
+              ./img/products/ls-1.jpg    1x,
+              ./img/products/ls-1@2x.jpg 2x
+            " src="/img/products/ls-1.jpg" alt="products" loading="lazy" class="our-products__image" width="230" />
+
+          <h3 class="our-products__name">LOVE STORY</h3>
+          <p class="our-products__type">price for 1 hour photoshoot</p>
+          <button class="our-products__price">149 EUR</button>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srcset="
+               ./img/products/str-1.jpg    1x,
+              ./img/products/str-1@2x.jpg 2x
+            " src="/img/products/str-1.jpg" alt="products3" loading="lazy" class="our-products__image" width="230" />
+          <h3 class="our-products__name 1">STREET'S STORY</h3>
+          <p class="our-products__type">price for 1 hour photoshoot</p>
+          <button class="our-products__price">149 EUR</button>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srcset="/team-project-g21/assets/nat-1-aa4f2129.jpg 1x, /team-project-g21/assets/nat-1-aa4f2129.jpg 2x" src="/team-project-g21/assets/nat-1-aa4f2129.jpg" alt="products3" loading="lazy" class="our-products__image" width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name 2">NATURE MAGIC</h3>
+            <p class="our-products__type">price for 1 hour photoshoot</p>
+            <button class="our-products__price">149 EUR</button>
+          </div>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srcset="
+              ./img/products/stu-1.jpg    1x,
+              ./img/products/stu-1@2x.jpg 2x
+            " src="/img/products/stu-1.jpg" alt="products4" loading="lazy" class="our-products__image" width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">STUDIO</h3>
+            <p class="our-products__type">price for 1 hour photoshoot
+
+            </p>
+            <button class="our-products__price">149 EUR</button>
+          </div>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+          ./img/products/par-1.jpg    1x,
+          ./img/products/par-1@2x.jpg 2x
+        " src="/team-project-g21/assets/par-1-3012d38f.jpg" alt="products5" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">PARTY</h3>
+            <p class="our-products__type">price for 1 hour photoshoot</p>
+            <button class="our-products__price">149 EUR</button>
+          </div>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+          ./img/products/wd-1.jpg    1x,
+          ./img/products/wd-1@2x.jpg 2x
+        " src="/team-project-g21/assets/wd-1-46b36255.jpg" alt="products6" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">WEDDING</h3>
+            <p class="our-products__type">price for 1 hour photoshoot</p>
+            <button class="our-products__price">149 EUR</button>
+          </div>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+          ./img/products/pg-1.jpg    1x,
+          ./img/products/pg-1@2x.jpg 2x
+        " src="/team-project-g21/assets/pg-1-8ea5d35a.jpg" alt="products7" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">PREGNANCY</h3>
+            <p class="our-products__type">price for 1 hour photoshoot</p>
+            <button class="our-products__price">149 EUR</button>
+          </div>
+        </li>
+        <li class="our-products__item swiper-slide">
+          <img srrcset="
+          ./img/products/ch-1.jpg    1x,
+          ./img/products/ch-1@2x.jpg 2x
+        " src="/team-project-g21/assets/ch-1-55829709.jpg"  alt="products8" loading="lazy" class="our-products__image"
+            width="230" />
+          <div class="our-products__descr">
+            <h3 class="our-products__name">CHILDREN</h3>
+            <p class="our-products__type">price for 1 hour photoshoot</p>
+            <button class="our-products__price">149 EUR</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="our_products__swiper-pagination"></div>
+  </div>
+</section>
+  <section id="sellers" class="top-sellers-section">
+  <div class="container">
+    <h2 class="top-sellers-title">
+      <span class="top-sellers-title-span">top </span>Sellers
+    </h2>
+    <div class="top-sallers-wrapper">
+      <ul class="top-sellers-list">
+        <li>
+          <picture>
+            <source srcset="/team-project-g21/assets/top-sellers-desk-d735d33a.jpg 1x, /team-project-g21/assets/top-sellers-desk@2x-08a9bf11.jpg 2x" media="(min-width: 1200px)" />
+            <source srcset="/team-project-g21/assets/top-sellers-tab-9772d6bb.jpg 1x, /team-project-g21/assets/top-sellers-tab@2x-f1dbea61.jpg 2x" media="(min-width: 768px)" />
+
+            <source srcset="/team-project-g21/assets/top-sellers-mob-67bfc791.jpg 1x, /team-project-g21/assets/top-sellers-mob@2x-e6273d87.jpg 2x" media="(min-width: 375px)" />
+
+            <img class="top-sellers-img" src="/team-project-g21/assets/top-sellers-mob-67bfc791.jpg" alt="photo1"
+              loading="lazy" />
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="/team-project-g21/assets/top-sellers2-desk-d74ebfed.jpg 1x, /team-project-g21/assets/top-sellers2-desk@2x-522fc736.jpg 2x" media="(min-width: 1200px)" />
+            <source srcset="/team-project-g21/assets/top-sellers2-tab-01963d76.jpg 1x, /team-project-g21/assets/top-sellers2-tab@2x-971edc06.jpg 2x" media="(min-width: 768px)" />
+
+            <source srcset="/team-project-g21/assets/top-sellers2-mob-b11d521a.jpg 1x, /team-project-g21/assets/top-sellers2-mob@2x-49f01eb2.jpg 2x" media="(min-width: 375px)" />
+
+            <img class="top-sellers-img" src="/team-project-g21/assets/top-sellers2-mob-b11d521a.jpg" alt="photo2"
+              loading="lazy" />
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source srcset="/team-project-g21/assets/top-sellers3-desk-e6def52c.jpg 1x, /team-project-g21/assets/top-sellers3-desk@2x-baf96a05.jpg 2x" media="(min-width: 1200px)" />
+            <img class="top-sellers-img" src="/team-project-g21/assets/top-sellers3-desk-e6def52c.jpg" alt="photo3"
+              loading="lazy" />
+          </picture>
+        </li>
+      </ul>
+
+      <div class="top-sellers-add-content">
+        <p class="top-sellers-description">
+          Years go by, but there are not a single colorful photograph as a souvenir in the home archive.
+          You won't be able to use a camera in your smartphone for long. Therefore, there is a need to agree
+          to a colorful photo shoot as a replacement for amateur photographs with lilacs.
+        </p>
+
+        <button type="button" class="top-sellers-button" data-open-modal="1">
+          Buy now
+        </button>
+
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="chocolate-is-loved" class="section__reviews">
+  <div class="reviews__container container">
+    <h2 class="reviews__title"><span>Photoshoot</span> is loved</h2>
+    <div class="reviews__block">
+
+      <div class="reviews__list swiper-wrapper">
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review1-6e8ce25f.png 1x, /team-project-g21/assets/review1@2x-8840d016.png 2x" src="/team-project-g21/assets/review1-6e8ce25f.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Victoria Dobrzhanska</h3>
+          <p class="reviews__item-text">
+            I love yaroshenko.art photoshoots. Perfect combination of talent, professionalism and dedication.
+          </p>
+        </div>
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review2-d3bba9ed.png 1x, /team-project-g21/assets/review2@2x-f9ccf6b8.png 2x" src="/team-project-g21/assets/review2-d3bba9ed.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Albert Amelin</h3>
+          <p class="reviews__item-text">
+            These photoshoots confection is a delight! A delight! The process is always
+            light and funny, the time is running very smart, and the result is perfect for me.
+          </p>
+        </div>
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review3-b857cdab.png 1x, /team-project-g21/assets/review3@2x-ca8c6ffb.png 2x" src="/team-project-g21/assets/review3-b857cdab.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Victoria Kyrilenko</h3>
+          <p class="reviews__item-text">
+            А мені нравитця як Софія фотографує! Люди суєтяться, бігають, аж очі у них вилазять від такої краси. А ми стоїмо, сміємося, нам це по приколу!
+          </p>
+        </div>
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review4-d78e5f07.png 1x, /team-project-g21/assets/review4@2x-5131a1da.png 2x" src="/team-project-g21/assets/review4-d78e5f07.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Hanna Smidt</h3>
+          <p class="reviews__item-text">
+            The photoshoot assortment was delicious. Both studio and outdoors ones were smooth and just right on the sweetness level.
+          </p>
+        </div>
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review5-15270bf1.png 1x, /team-project-g21/assets/review5@2x-5f6513c8.png 2x" src="/team-project-g21/assets/review5-15270bf1.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">LeBron James</h3>
+          <p class="reviews__item-text">
+            This is delicious. It so rich and flavorful you don’t need to use as
+            many. I love to pose with an apple and almond butter and these chips for
+            a snack.
+          </p>
+        </div>
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review6-6ba8d063.png 1x, /team-project-g21/assets/review6@2x-44eab337.png 2x" src="/team-project-g21/assets/review6-6ba8d063.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Mathew Bellamy</h3>
+          <p class="reviews__item-text">
+            I love this projest a lot! It`s always pleasure to work with Sophia. She is a true professional!
+          </p>
+        </div>
+        
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review7-0cff32a9.png 1x, /team-project-g21/assets/review7@2x-e17e6c87.png 2x" src="/team-project-g21/assets/review7-0cff32a9.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Erik Yaroshenko</h3>
+          <p class="reviews__item-text">
+            Skills, talent, dedication and we have to simple brilliant as result. My wedding photoshoot was the masterpiece!
+          </p>
+        </div>   
+        
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review8-e0106ea2.png 1x, /team-project-g21/assets/review8@2x-f265d6a1.png 2x" src="/team-project-g21/assets/review8-e0106ea2.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Lana del Rey</h3>
+          <p class="reviews__item-text">
+            I worked with Sonya in her beautiful studio and I have to say it was a delight! Now I use these awesome photos in my European tour.
+          </p>
+        </div>
+
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review9-14fdcf6f.png 1x, /team-project-g21/assets/review9@2x-b491f84a.png 2x" src="/team-project-g21/assets/review9-14fdcf6f.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Jerry Heil</h3>
+          <p class="reviews__item-text">
+            Everything was on the space level! Recomend this photographer as one of the best in Germany.
+          </p>
+        </div>   
+        
+        <div class="reviews__item swiper-slide">
+          <img srcset="/team-project-g21/assets/review10-d3794e91.png 1x, /team-project-g21/assets/review10@2x-5ec3fb8d.png 2x" src="/team-project-g21/assets/review10-d3794e91.png"
+            alt="Reviewer avatar" class="reviews__item-image" loading="lazy" width="80" />
+          <h3 class="reviews__item-title">Sasha Kreosan</h3>
+          <p class="reviews__item-text">
+            Good price, awesome quality and perfect atmosphere on the photoshoot. Now I have best photos with my boys!
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="reviews__swiper-pagination"></div>
+    <button type="button" class="reviews-button" data-open-modal="2">
+      Leave a review
+    </button>
+  </div>
+</section>
+  <section class="subscribe">
+
+  <div class="container">
+    <h2 class="header-subs">EXPLORE OUR PHOTOSHOOT FIRST</h2>
+    <p class="description">From the velvety texture to the rich and complex flavor, our photoshoot is a true
+      indulgence that will leave you craving more. Made with only the finest cameras and handcrafted with the utmost
+      care, each piece is a work of art that is sure to please.</p>
+    <button class="subscribe-button" data-open-modal="3" type="button">Subscribe</button>
+  </div>
+
+  <div class="backdrop is-hidden" data-modal="3">
+    <div class="exp-modal-wrap">
+      <div class="modal-top">
+        <button class="modal-close" data-close-modal type="button">
+
+          <svg class="close-icon" width="24" height="24">
+            <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-x-close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mod-main-block">
+        <div name="contacts">
+
+          <p class="modal-title-explore">Explore our <br> <span class="span-modal">photoshoot</span> first!</p>
+
+          <div class="form-group">
+            <label for="email" class="form-label"></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" />
+
+            <button type="submit" class="button submit-btn" data-close-modal>Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+</section>
+  <footer class="footer-section" id="footer">
+    <div class="container">
+        <div class="footer-content">
+            <b class="footer-text"><span class="footer-accent-text">Photoshoot</span> a perfect way to save the best
+                memories</b>
+            <div class="footer-contact-container">
+                <address class="footer-contact">
+                    <b class="footer-contact-text">Contact us</b>
+                    <ul class="footer-contact-list">
+                        <li class="footer-contact-item"><a href="tel:+491711130312"
+                                class="footer-contact-link">+49 171 113-03-12</a></li>
+                        <li><a href="mailto:simplychoc@gmail.com"
+                                class="footer-contact-link">yaroshenkoart@gmail.com</a>
+                        </li>
+                    </ul>
+                </address>
+                <ul class="footer-social-media-list">
+                    <li><a href="https://www.instagram.com/yaroshenko.art/" class="footer-social-media-link" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><svg class="footer-icon">
+                                <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-instagram"></use>
+                            </svg></a></li>
+
+                            <li><a href="https://tiktok.com/" class="footer-social-media-link" target="_blank" rel="noopener
+                                noreferrer" aria-label="tiktok"><svg class="footer-icon">
+        <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-tiktok"></use>
+    </svg></a></li>
+                    <li><a href="https://twitter.com/" class="footer-social-media-link" target="_blank" rel="noopener
+                            noreferrer" aria-label="Twitter"><svg class="footer-icon">
+                                <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-twitter"></use>
+                            </svg></a></li>
+                   
+                </ul>
+            </div>
+        </div>
+        <ul class="footer-navigation-list">
+            <li class="footer-navigation-item"><a href="#home" class="footer-navigation-link">Home</a></li>
+            <li class="footer-navigation-item"><a href="#how-its-made" class="footer-navigation-link">How it&#8217;s
+                    made?</a></li>
+            <li class="footer-navigation-item"><a href="#products" class="footer-navigation-link">Our works</a>
+            </li>
+            <li class="footer-navigation-item"><a href="#sellers" class="footer-navigation-link">Top sellers</a>
+            </li>
+            <li class="footer-navigation-item"><a href="#chocolate-is-loved" class="footer-navigation-link">Photoshoot is
+                    loved</a></li>
+        </ul>
+    </div>
+</footer>
+  <div class="backdrop is-hidden" data-modal="1">
+  <div class="order-modal">
+    <button class="order-modal-close" type="button" data-close-modal>
+      <svg class="order-modal-close-icon" width="23" height="23">
+        <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-x-close"></use>
+      </svg>
+    </button>
+
+    <h2 class="order-form-title"><span>ORDER</span> NOW</h2>
+
+    <div class="order-modal-container">
+      <form class="order-modal-form">
+        <ul class="order-list list">
+          <li class="order-item">
+            <label class="order-label">
+              <input type="radio" class="order-radio-button visually-hidden" name="order-mass" value="100">
+              <span class="order-thumb">
+                <span class="order-wrapper">
+                  <picture>
+                    <source srcset="/team-project-g21/assets/buy-tab-e2f9b641.jpg 1x, /team-project-g21/assets/buy-tab@2x-3c8d6e73.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="/team-project-g21/assets/buy-tab@2x-3c8d6e73.jpg 1x, /team-project-g21/assets/buy-tab@2x-3c8d6e73.jpg 2x" media="(min-width: 375px)" />
+                    <img src="/team-project-g21/assets/buy-tab@2x-3c8d6e73.jpg" alt="pieces of chocolate" loading="lazy" />
+                  </picture>
+                </span>
+                <span class="button order-btn">NATURAL</span>
+              </span>
+            </label>
+          </li>
+          <li class="order-item">
+            <label class="order-label">
+              <input type="radio" class="order-radio-button visually-hidden" name="order-mass" value="200">
+              <span class="order-thumb">
+                <span class="order-wrapper">
+                  <picture>
+                    <source srcset="/team-project-g21/assets/top-sellers-desk-d735d33a.jpg 1x, /team-project-g21/assets/top-sellers-desk-d735d33a.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="/team-project-g21/assets/top-sellers-desk-d735d33a.jpg 1x, /team-project-g21/assets/top-sellers-desk-d735d33a.jpg 2x" media="(min-width: 375px)" />
+                    <img src="/team-project-g21/assets/top-sellers-desk-d735d33a.jpg" alt="pieces of chocolate" loading="lazy" />
+                  </picture>
+                </span>
+                <span class="button order-btn">STREET</span>
+              </span>
+            </label>
+          </li>
+          <li class="order-item">
+            <label class="order-label">
+              <input type="radio" class="order-radio-button visually-hidden" name="order-mass" value="300">
+              <span class="order-thumb">
+                <span class="order-wrapper">
+                  <picture>
+                    <source srcset="/team-project-g21/assets/top-sellers3-desk-e6def52c.jpg 1x, /team-project-g21/assets/top-sellers3-desk-e6def52c.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="/team-project-g21/assets/top-sellers3-desk-e6def52c.jpg 1x, /team-project-g21/assets/top-sellers3-desk-e6def52c.jpg 2x" media="(min-width: 375px)" />
+                    <img src="/team-project-g21/assets/top-sellers3-desk-e6def52c.jpg" loading="lazy" alt="pieces of chocolate" />
+                  </picture>
+                </span>
+                <span class="button order-btn">STUDIO</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+
+        <div class="order-form-group">
+          <label for="username" class="order-form-username order-form-label">
+            <span>Personal information</span>
+          </label>
+          <label for="surname" class="order-form-surname order-form-label">
+          </label>
+          <div class="order-form-control order-contacts-form">
+            <input id="username" type="text" name="username" class="order-form-input" placeholder="Name" required
+              maxlength="29" minlength="3" />
+            <input id="surname" type="text" name="surname" class="order-form-input" placeholder="Surname" required
+              maxlength="29" minlength="3" />
+          </div>
+        </div>
+
+        <div class="order-form-group">
+          <label for="email" class="order-email order-form-label">
+            <span>Email</span>
+          </label>
+          <div class="order-form-control">
+            <input id="email" type="email" name="email" class="order-form-input" placeholder="Enter your email"
+              pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}" required maxlength="29" />
+          </div>
+        </div>
+
+        <div class="order-form-group">
+          <label for="phone" class="order-phone order-form-label">
+            <span>Phone number</span>
+          </label>
+          <div class="order-form-control">
+            <input id="phone" type="tel" name="phone" class="order-form-input modal-order-tel"
+              pattern="[0-9]{2}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="Phone number" required maxlength="9" />
+            <span class="modal-order-icon-position">
+              <svg class="modal-order-tel-icon" width="24" height="18">
+                <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-flag"></use>
+              </svg>
+              +380
+            </span>
+          </div>
+        </div>
+
+        <div class="order-form-group">
+          <label for="card" class="order-card order-form-label list">
+            <span>Card number</span>
+          </label>
+          <div class="order-form-control order-card-form">
+            <input id="card" type="number" name="card" class="order-form-input" placeholder="Enter card" />
+            <svg class="form-icon" width="32px" height="18px">
+              <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-mastercard"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="order-form-group">
+          <label for="order-comment" class="order-textarea-comment order-form-label">
+            <span>Comment</span>
+          </label>
+          <textarea name="comment" rows="5" placeholder="Enter text" class="order-form-textarea order-form-input"
+            id="order-comment"></textarea>
+        </div>
+        <button type="submit" class="submit-button" data-close-modal>Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="backdrop is-hidden" data-modal="2">
+  <div class="modal">
+    <button type="button" class="modal-close" data-close-modal>
+      <svg class="modal-close--icon" width="28" height="28">
+        <use href="/team-project-g21/assets/sprite-f42b4e2f.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <h3 class="modal-title">
+      leave a review about<br />
+      <span class="modal-title--part">your photoshoot</span>
+    </h3>
+    <form class="modal-form">
+      <input class="modal-input" type="text" placeholder="Name" required pattern="/^[a-z ,.'-]+$/i" />
+      <input class="modal-input" type="email" placeholder="Email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" />
+      <div class="phone-wrap">
+        <div class="phone-country">
+          <div class="flag"></div>
+          <p class="country-choise">+380</p>
+        </div>
+        <input class="phone-input" type="tel" placeholder="Phone number" required
+          pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" />
+      </div>
+      <textarea class="modal-textarea" placeholder="Enter text"></textarea>
+      <button type="submit" class="modal-submit" data-modal-close>
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+
+  
+
+</body>
+
+</html>
